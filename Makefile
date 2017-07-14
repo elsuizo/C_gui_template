@@ -10,7 +10,7 @@ TARGET   = out
 
 CC       = clang
 # compiling flags here
-CFLAGS   = -g -std=c99 -Wall -I. -pedantic -O2
+CFLAGS   = -g -std=c89 -Wall -I. -pedantic -O2
 # CFLAGS   = -std=c99 -Wall -I.
 
 LINKER   = clang -o
@@ -42,7 +42,7 @@ $(OBJECTS): $(OBJDIR)/%.o : $(SRCDIR)/%.c
 
 .PHONY: clean
 clean:
-	@$(rm) $(OBJECTS)
+	@$(RM) $(OBJECTS)
 	@echo "Cleanup complete!"
 
 .PHONY: remove
