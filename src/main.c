@@ -12,6 +12,7 @@
 
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_opengl.h>
+#include "../inc/node_editor.h"
 
 #define NK_INCLUDE_FIXED_TYPES
 #define NK_INCLUDE_STANDARD_IO
@@ -24,14 +25,14 @@
 #define NK_SDL_GL2_IMPLEMENTATION
 #include "../inc/nuklear.h"
 #include "../inc/nuklear_sdl_gl2.h"
-
-#define WINDOW_WIDTH 1200
+#define WINDOW_WIDTH  800
 #define WINDOW_HEIGHT 800
 
 #define UNUSED(a) (void)a
 #define MIN(a,b) ((a) < (b) ? (a) : (b))
 #define MAX(a,b) ((a) < (b) ? (b) : (a))
 #define LEN(a) (sizeof(a)/sizeof(a)[0])
+
 
 /* ===============================================================
  *
@@ -44,8 +45,20 @@
 /*#include "../style.c"*/
 /*#include "../calculator.c"*/
 /*#include "../overview.c"*/
-/*#include "../node_editor.c"*/
+/* #include "node_editor.c" */
 
+/* nuklear - v1.00 - public domain */
+/* This is a simple node editor just to show a simple implementation and that
+ * it is possible to achieve it with this library. While all nodes inside this
+ * example use a simple color modifier as content you could change them
+ * to have your custom content depending on the node time.
+ * Biggest difference to most usual implementation is that this example does
+ * not have connectors on the right position of the property that it links.
+ * This is mainly done out of laziness and could be implemented as well but
+ * requires calculating the position of all rows and add connectors.
+ * In addition adding and removing nodes is quite limited at the
+ * moment since it is based on a simple fixed array. If this is to be converted
+ * into something more serious it is probably best to extend it.*/
 /* ===============================================================
  *
  *                          DEMO
@@ -149,7 +162,7 @@ main(int argc, char* argv[])
         /* -------------- EXAMPLES ---------------- */
         /*calculator(ctx);*/
         /*overview(ctx);*/
-        /*node_editor(ctx);*/
+        /* node_editor(ctx); */
         /* ----------------------------------------- */
 
         /* Draw */
