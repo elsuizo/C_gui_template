@@ -25,12 +25,8 @@ You should have received a copy of the GNU General Public License
 #ifndef NODE_EDITOR_H
 #define NODE_EDITOR_H
 
-#include "../inc/nuklear.h"
-#include <assert.h>
-#include <string.h>
-#include <stdio.h>
-#include <math.h>
-#include <stdlib.h>
+
+#include "../inc/main.h"
 
 struct node {
     int ID;
@@ -90,15 +86,12 @@ void
 node_editor_add(struct node_editor *editor, const char *name, struct nk_rect bounds,
     struct nk_color col, int in_count, int out_count);
 
-
 void
 node_editor_link(struct node_editor *editor, int in_id, int in_slot,
     int out_id, int out_slot);
 
-
 void
 node_editor_init(struct node_editor *editor);
-
 
 int
 node_editor(struct nk_context *ctx);
