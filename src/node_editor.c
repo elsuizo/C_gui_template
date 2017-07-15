@@ -14,6 +14,7 @@
 #include "../inc/node_editor.h"
 
 struct node_editor nodeEditor;
+
 void
 node_editor_push(struct node_editor *editor, struct node *node)
 {
