@@ -136,7 +136,7 @@ main(int argc, char* argv[])
         nk_end(ctx);
 
         /* -------------- EXAMPLES ---------------- */
-        /*calculator(ctx);*/
+        calculator(ctx);
         /*overview(ctx);*/
         node_editor(ctx);
         /* ----------------------------------------- */
